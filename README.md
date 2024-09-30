@@ -12,10 +12,12 @@ You will need to clone this repository, create a project board, and create issue
 
 ### User Stories
 
->As a user I want to see what services the areas of the park offer,
-so I know which area to visit to do what I want,
-and when I click on the area, it lists the associated activities
+**As** a user I want to see what services the areas of the park offer, so I know which area to visit to do what I want, and  
+**when** I click on the area,  
+**then** it lists the associated activities 
 
->As a user I what guests are at in a given area. So I would know how manny guests are there and if its too crowded. and when i click on the the area it will show me how many guests are there.
+**As** a user I what guests are at in a given area. So I would know how many guests are there and if its too crowded. and  
+**when** i click on the the area  
+**then** it will show me how many guests are there.
 
 >
