@@ -13,4 +13,4 @@ export const parkAreas = () => {
         areaElement.innerHTML = `<h2>${area.name}</h2><p>Services: ${area.services.join(', ')}</p>`;
         areasContainer.appendChild(areaElement)
     }
-}
+};
