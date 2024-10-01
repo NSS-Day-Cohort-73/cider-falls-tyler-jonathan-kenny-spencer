@@ -4,7 +4,7 @@ export const parkAreas = () => {
     const areas = getAreas()
     const areasContainer = document.getElementById('areas-container')
 
-    areasContainer.innerHTML = ''
+    areasContainer.innerHTML = ""
 
     for (let i = 0; i < areas.length; i++) {
         const area = areas[i]

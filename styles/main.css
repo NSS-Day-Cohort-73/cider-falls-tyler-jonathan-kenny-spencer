@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+h1 {
+    margin: 0;
+}
+
+section h2 {
+    margin: 0 0 10px 0;
+}
+
+#service-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 20px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.area-box {
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.guest-list {
+    grid-column: span 2; /* Makes this box span two columns */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f8f8f8;
+}
