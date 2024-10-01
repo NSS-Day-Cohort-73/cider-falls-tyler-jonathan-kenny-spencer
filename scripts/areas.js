@@ -1,18 +1,16 @@
+
 import { getAreas, getGuests } from "./database.js";
 
 export const generateAreas = () => {
     const areas = getAreas();
-    
     let areasHTML = "";
-
     for (const area of areas) {
         areasHTML += `
             <div class="area-box" data-id="${area.id}">
                 <h2 class="area-title">${area.name}</h2>
             </div>
-        `;
+        `
     }
-
     return areasHTML;
 };
 
@@ -30,3 +28,4 @@ document.addEventListener("click", (event) => {
         alert(`There are ${guestCount} guests in this area`);
     }
 });
+
