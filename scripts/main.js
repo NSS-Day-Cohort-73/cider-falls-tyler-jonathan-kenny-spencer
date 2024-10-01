@@ -1,0 +1,1 @@
+import { generateAreas } from "./areas.js";
