@@ -1,4 +1,4 @@
-import { parkAreas } from "./areas.js"; 
+import { generateAreas } from "./areas.js"; 
 import { ParkService } from "./services.js";
 //import { parkGuests } from "./guests.js"; 
 
@@ -10,7 +10,7 @@ const applicationHTML = `
     <article class="details">
         <section class="detail--column list details__areas">
             <h2>Park Areas</h2>
-            ${parkAreas()} 
+            ${generateAreas()} 
         </section>
         <section class="detail--column details__guests">
             <h2>Guest List</h2>
