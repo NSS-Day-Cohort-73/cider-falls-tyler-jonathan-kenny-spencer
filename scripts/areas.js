@@ -8,7 +8,6 @@ export const generateAreas = () => {
     for (const area of areas) {
         areasHTML += `
             <div class="area-box" data-id="${area.id}">
-                <h2 class="area-title">${area.name}</h2>
             </div>
         `
     }

@@ -1,35 +1,11 @@
 const database = {
     areas: [
-        {
-            id: 1,
-            name: "Chamfort River",
-            services: [1, 2, 3] // References to service IDs
-        },
-        {
-            id: 2,
-            name: "Lost Wolf Hiking Trail",
-            services: [4, 5, 6]
-        },
-        {
-            id: 3,
-            name: "Lodge",
-            services: [7, 8, 9, 5, 11, 12] // Includes Hotel and Restaurant as services
-        },
-        {
-            id: 4,
-            name: "Gander River",
-            services: [3, 4, 13] // Includes Natural Preserve as a service
-        },
-        {
-            id: 5,
-            name: "Campgrounds",
-            services: [9, 7, 8, 14, 15] // Includes Office Park and Children's Play Areas as services
-        },
-        {
-            id: 6,
-            name: "Pine Bluffs Trails",
-            services: [4, 5, 10, 16] // Includes Food Vendors as a service
-        }
+        { id: 1, name: "Chamfort River" },
+        { id: 2, name: "Lost Wolf Hiking Trail" },
+        { id: 3, name: "Lodge" },
+        { id: 4, name: "Gander River" },
+        { id: 5, name: "Campgrounds" },
+        { id: 6, name: "Pine Bluffs Trails" }
     ],
     services: [
         { id: 1, name: "Rafting" },
@@ -53,14 +29,40 @@ const database = {
         { id: 1, firstName: "John Doe", areaId: 1 },
         { id: 2, firstName: "Jane Smith", areaId: 2 },
         { id: 3, firstName: "Michael Johnson", areaId: 3 },
-        { id: 4,firstName: "Emily Davis", areaId: 1 },
-        { id: 5,firstName: "Chris Brown", areaId: 4 },
-        { id: 6,firstName: "Sarah Wilson", areaId: 6 },
-        { id: 7,firstName: "Matthew Miller", areaId: 5 },
-        { id: 8,firstName: "Ashley Taylor", areaId: 3 },
-        { id: 9,firstName: "David Anderson", areaId: 6 },
-        { id: 10,firstName: "Jessica Thomas", areaId: 2 }
-    ] // Will create ServieAreas object later to rid the area object of arrays as key values
+        { id: 4, firstName: "Emily Davis", areaId: 1 },
+        { id: 5, firstName: "Chris Brown", areaId: 4 },
+        { id: 6, firstName: "Sarah Wilson", areaId: 6 },
+        { id: 7, firstName: "Matthew Miller", areaId: 5 },
+        { id: 8, firstName: "Ashley Taylor", areaId: 3 },
+        { id: 9, firstName: "David Anderson", areaId: 6 },
+        { id: 10, firstName: "Jessica Thomas", areaId: 2 }
+    ],
+    serviceAreas: [
+        { areaId: 1, serviceId: 1 },
+        { areaId: 1, serviceId: 2 },
+        { areaId: 1, serviceId: 3 },
+        { areaId: 2, serviceId: 4 },
+        { areaId: 2, serviceId: 5 },
+        { areaId: 2, serviceId: 6 },
+        { areaId: 3, serviceId: 7 },
+        { areaId: 3, serviceId: 8 },
+        { areaId: 3, serviceId: 9 },
+        { areaId: 3, serviceId: 5 },
+        { areaId: 3, serviceId: 11 },
+        { areaId: 3, serviceId: 12 },
+        { areaId: 4, serviceId: 3 },
+        { areaId: 4, serviceId: 4 },
+        { areaId: 4, serviceId: 13 },
+        { areaId: 5, serviceId: 9 },
+        { areaId: 5, serviceId: 7 },
+        { areaId: 5, serviceId: 8 },
+        { areaId: 5, serviceId: 14 },
+        { areaId: 5, serviceId: 15 },
+        { areaId: 6, serviceId: 4 },
+        { areaId: 6, serviceId: 5 },
+        { areaId: 6, serviceId: 10 },
+        { areaId: 6, serviceId: 16 }
+    ]
 };
 
 export const getGuests = () => {
@@ -73,4 +75,8 @@ export const getServices = () => {
 
 export const getAreas = () => {
     return database.areas.map(area => ({ ...area }));
+};
+
+export const getServiceAreas = () => {
+    return database.serviceAreas.map(sa => ({ ...sa }));
 };
