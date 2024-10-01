@@ -1,4 +1,4 @@
-import { getServices, getAreas } from "./database.js";
+import { getServiceAreas, getServices, getAreas } from "./database.js";
 
 const services = getServices();
 const areas = getAreas();
@@ -9,8 +9,9 @@ document.addEventListener(
         const clickedTarget = event.target;
         if (clickedTarget.dataset.type === "service") {
             const serviceId = parseInt(clickedTarget.dataset.serviceid);
-            const serviceName = clickedTarget.dataset.name;
-            const associatedAreas = findAService({ id: serviceId }, areas);
+            const serviceName = clickedTarget.dataset.name; 
+            
+            const associatedAreas = findAService(serviceId);
             const areaNames = associatedAreas.map(area => area.name).join(", ");
 
             if (areaNames.length > 0) {
@@ -22,21 +23,25 @@ document.addEventListener(
     }
 );
 
-const findAService = (servObject, areasArray) => {
-    let foundAreas = [];
-    for (const area of areasArray) {
-        if (area.services.includes(servObject.id)) {
-            foundAreas.push(area); 
-        }
-    }
+export const findAService = (serviceId) => {
+    const serviceAreas = getServiceAreas();
+    const areas = getAreas();
+
+    const matchingServiceAreas = serviceAreas.filter(sa => sa.serviceId === serviceId);
+
+    const foundAreas = matchingServiceAreas.map(sa => {
+        return areas.find(area => area.id === sa.areaId);
+    });
+
     return foundAreas;
 };
 
 export const ParkService = () => {
+    const services = getServices();
     let html = '';
     
     for (const serv of services) {
-        html += `<lu class="services" data-type="service" data-serviceid="${serv.id}" data-name="${serv.name}">${serv.name}, </lu>`;
+        html += `<ul class="services" data-type="service" data-serviceid="${serv.id}" data-name="${serv.name}">${serv.name}, </ul>`;
     }
     return html;
 };
