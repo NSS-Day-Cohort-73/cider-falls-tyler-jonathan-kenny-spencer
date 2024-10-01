@@ -1,3 +1,4 @@
+import {generateGuests} from "./guests.js"
 import { generateAreas } from "./areas.js";
 import { ParkService } from "./services.js";
 
@@ -28,3 +29,4 @@ const applicationHTML = `
 `;
 
 mainContainer.innerHTML = applicationHTML;
+
