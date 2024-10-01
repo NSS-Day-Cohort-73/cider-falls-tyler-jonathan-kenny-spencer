@@ -60,7 +60,7 @@ const database = {
         { id: 8,firstName: "Ashley Taylor", areaId: 3 },
         { id: 9,firstName: "David Anderson", areaId: 6 },
         { id: 10,firstName: "Jessica Thomas", areaId: 2 }
-    ]
+    ] // Will create ServieAreas object later to rid the area object of arrays as key values
 };
 
 export const getGuests = () => {
