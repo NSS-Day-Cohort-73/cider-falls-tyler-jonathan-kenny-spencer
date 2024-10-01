@@ -24,7 +24,7 @@ const getGuestCount = () => {
 document.addEventListener("click", (event) => {
     const clickedTitle = event.target.closest(".area-title")
     if (clickedTitle) {
-        const areaId = clickedTitle.parentElement.dataset.id
+        // const areaId = clickedTitle.parentElement.dataset.id
         const guestCount = getGuestCount()
         alert(`There are ${guestCount} guests in this area`)
     }
