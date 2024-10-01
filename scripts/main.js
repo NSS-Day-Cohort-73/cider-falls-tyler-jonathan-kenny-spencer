@@ -20,6 +20,7 @@ const applicationHTML = `
         </section>
         <section class="detail--column details__guests">
             <h2>Guest List</h2>
+            ${generateGuests()}
         </section>
     </article>
 
