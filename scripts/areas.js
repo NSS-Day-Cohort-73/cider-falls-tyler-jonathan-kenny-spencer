@@ -1,16 +1,13 @@
-import { getAreas } from "./database.js";
+import { getAreas } from "./database.js"
 
-export const parkAreas = () => {
+export const generateAreas = () => {
     const areas = getAreas()
-    const areasContainer = document.getElementById('areas-container')
+    let areasHTML = `<ul>`
 
-    areasContainer.innerHTML = ""
-
-    for (let i = 0; i < areas.length; i++) {
-        const area = areas[i]
-        const areaElement = document.createElement('div')
-        areaElement.classList.add('area')
-        areaElement.innerHTML = `<h2>${area.name}</h2><p>Services: ${area.services.join(', ')}</p>`;
-        areasContainer.appendChild(areaElement)
+    for (const area of areas) {
+        areasHTML += `<li data-id="${area.id}">${area.name}</li>`
     }
-};
+
+    areasHTML += `</ul>`
+    return areasHTML
+}
