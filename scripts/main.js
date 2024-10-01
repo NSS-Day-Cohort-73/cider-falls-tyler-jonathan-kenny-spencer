@@ -23,9 +23,13 @@ const applicationHTML = `
         </section>
     </article>
 
-    <footer>
-        <p>Contact Info: Reach us at info@ciderfallspark.com</p>
-    </footer>
+   <footer>
+    <p>Contact Info: Reach us at info@ciderfallspark.com</p>
+    <p>Phone: (555) 123-4567</p>
+    <p>Office Address: 1234 Forest Drive, Cider Falls, CA 98765</p>
+    <p>Contact: Joe Mama, Park Manager</p>
+</footer>
+
 `;
 
 mainContainer.innerHTML = applicationHTML;

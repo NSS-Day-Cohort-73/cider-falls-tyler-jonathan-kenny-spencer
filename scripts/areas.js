@@ -8,7 +8,7 @@ export const generateAreas = () => {
         areasHTML += `
             <div class="area-box" data-id="${area.id}">
                 <h2>${area.name}</h2>
-                <p>Services: </p>
+                <p>Spot check!</p>
             </div>
         `;
     }
