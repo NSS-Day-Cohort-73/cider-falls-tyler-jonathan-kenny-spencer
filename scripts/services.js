@@ -36,7 +36,7 @@ export const ParkService = () => {
     let html = '';
     
     for (const serv of services) {
-        html += `<lu class="services" data-type="service" data-serviceid="${serv.id}" data-name="${serv.name}">${serv.name}, </lu>`;
+        html += `<ul class="services" data-type="service" data-serviceid="${serv.id}" data-name="${serv.name}">${serv.name}, </ul>`;
     }
     return html;
 };
