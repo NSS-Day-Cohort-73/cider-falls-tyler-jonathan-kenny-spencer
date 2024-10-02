@@ -1,5 +1,5 @@
 import {generateGuests} from "./guests.js"
-import { generateAreas } from "./areas.js";
+import { generateAreas} from "./areas.js";
 import { ParkService } from "./services.js";
 
 const mainContainer = document.querySelector("#container");
