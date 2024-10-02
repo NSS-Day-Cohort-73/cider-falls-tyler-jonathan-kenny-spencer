@@ -25,8 +25,11 @@ export const generateAreas = () => {
         }
         serviceListHTML += "</ul>"
 
+
+        const areaImagePath = area.image;
+
         areasHTML += `
-            <div class="area-box" data-id="${area.id}">
+            <div class="area-box" data-id="${area.id}" style="background-image: url(${areaImagePath});">
                 <h2 class="area-title">${area.name}</h2>
                 <h3 class= "area-services"> ${serviceListHTML}</h3>
             </div>
