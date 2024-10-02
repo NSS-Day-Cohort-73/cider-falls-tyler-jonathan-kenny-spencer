@@ -6,8 +6,9 @@ export const generateAreas = () => {
     let areasHTML = "";
 
     for (const area of areas) {
+        const areaImagePath = area.image;
         areasHTML += `
-            <div class="area-box" data-id="${area.id}">
+            <div class="area-box" data-id="${area.id}" style="background-image: url(${areaImagePath});">
                 <h2 class="area-title">${area.name}</h2>
             </div>
         `;
