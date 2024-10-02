@@ -1,14 +1,37 @@
 
-import { getAreas, getGuests } from "./database.js";
+import { getAreas, getGuests,getServiceAreas, getServices,  } from "./database.js";
 
 export const generateAreas = () => {
     const areas = getAreas();
+    const serviceAreas = getServiceAreas()
+    const services = getServices()
     let areasHTML = "";
     for (const area of areas) {
+        let servicesForArea = []
+        for (const serviceArea of serviceAreas) {
+            if (serviceArea.areaId === area.id){
+                for (const service of services){
+                    if(service.id === serviceArea.serviceId){
+                        servicesForArea.push(service.name)
+                    }
+                }
+            }
+            
+        }
+        console.log(servicesForArea)
+        let serviceListHTML = "<ul>"
+        for (const serviceArea of servicesForArea) {
+            serviceListHTML += `<li>${serviceArea}</li>`
+        }
+        serviceListHTML += "</ul>"
+
+
         const areaImagePath = area.image;
+
         areasHTML += `
             <div class="area-box" data-id="${area.id}" style="background-image: url(${areaImagePath});">
                 <h2 class="area-title">${area.name}</h2>
+                <h3 class= "area-services"> ${serviceListHTML}</h3>
             </div>
         `
     }
