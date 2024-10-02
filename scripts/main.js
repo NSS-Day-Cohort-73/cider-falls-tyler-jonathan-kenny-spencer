@@ -7,7 +7,6 @@ const mainContainer = document.querySelector("#container");
 
 
 const applicationHTML = `
-    <h1>Cider Falls Park</h1>
     
     <article class="details">
         <section class="detail--column details__service">

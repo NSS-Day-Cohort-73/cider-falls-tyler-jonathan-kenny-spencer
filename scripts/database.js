@@ -1,11 +1,11 @@
 const database = {
     areas: [
-        { id: 1, name: "Chamfort River" },
-        { id: 2, name: "Lost Wolf Hiking Trail" },
-        { id: 3, name: "Lodge" },
-        { id: 4, name: "Gander River" },
-        { id: 5, name: "Campgrounds" },
-        { id: 6, name: "Pine Bluffs Trails" }
+        { id: 1, name: "Chamfort River", image: '../assets/chamfortRiver.png'},
+        { id: 2, name: "Lost Wolf Hiking Trail", image: '../assets/LostWolf.png' },
+        { id: 3, name: "Lodge", image: '../assets/lodge.png' },
+        { id: 4, name: "Gander River", image: '../assets/GanderRiver.png' },
+        { id: 5, name: "Campgrounds", image: '../assets/campgrounds.png' },
+        { id: 6, name: "Pine Bluffs Trails", image: '../assets/PineBluffTrails.png' }
     ],
     services: [
         { id: 1, name: "Rafting" },
